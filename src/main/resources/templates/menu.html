@@ -12,7 +12,7 @@
 </div>
 <div id = "servicesMenu">
     <table>
-        <th:block th:each = "facials : ${appropriateFacials}">
+        <th:block th:each = "facials : ${appropriateFacials}" id="appropriateFacials">
             <h3 th:text = "${appropriateFacials}">Facial Name</h3>
 <!--            <p th:text = "${coffee.description}">Info</p>-->
         </th:block>
