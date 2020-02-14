@@ -8,5 +8,13 @@
 <body>
         <p th:fragment = "manicureDescription">Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
         <p th:fragment = "pedicureDescription">Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+        <div th:fragment="clientProfile">
+            <h2>My profile</h2>
+            <p>do these words work</p>
+            <p th:text="${name}">name</p>
+            <p th:text="${skintype}">skintype</p>
+            <p th:text="${manipedi}">manipedi</p>
+            <p>or these</p>
+        </div>
 </body>
 </html>

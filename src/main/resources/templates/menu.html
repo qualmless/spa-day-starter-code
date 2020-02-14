@@ -7,9 +7,16 @@
 </head>
 <body>
 <h1>My Super Fancy Spa</h1>
-<div id = "clientProfile">
+<div th:replace="fragments :: clientProfile" id = "clientProfile">
+
 </div>
 <div id = "servicesMenu">
+    <table>
+        <th:block th:each = "facials : ${facials}">
+            <h3 th:text = "${facials[i]}">Facial Name</h3>
+<!--            <p th:text = "${coffee.description}">Info</p>-->
+        </th:block>
+    </table>
 </div>
 </body>
 </html>
