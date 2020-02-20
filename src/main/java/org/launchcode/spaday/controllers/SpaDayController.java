@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 @Controller
@@ -81,11 +82,37 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
-
+        model.addAttribute("name",name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi",manipedi);
+        model.addAttribute("appropriateFacials",appropriateFacials);
         return "menu";
     }
 
-//    @GetMapping
-//    public
+
+
+
+////    @PostMapping(value = "")
+////    public String clientProfileString(@RequestParam String name, @RequestParam String skintype, @RequestParam String manipedi, Model model) {
+////        model.addAttribute(clientProfileString(name,skintype,manipedi,model));
+////        return "fragments";
+////    }
+//
+////    public HashMap<String,String> facialsList = new HashMap<String,String>();
+////
+//    @PostMapping("")
+//    public String facialsListString(@RequestParam name, @RequestParam skintype, @RequestParam String manipedi, Model model) {
+//        model.addAttribute("Facial Style", "All Events");
+//        model.addAttribute("name", facialsList);
 //    }
+//
+////    @PostMapping("create")
+////    public HashMap<String,String> events(@RequestParam HashMap<String,String>(aName,aDescription)) {
+////        events.put(newName, newDescription);
+////        return events<>();
+////    }
+//
+////    @GetMapping
+////    public
+////    }
 }
